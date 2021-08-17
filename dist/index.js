@@ -27,7 +27,6 @@ var Dropzone = _interopDefault(require('react-dropzone'));
 var Chip = _interopDefault(require('@material-ui/core/Chip'));
 var Fab = _interopDefault(require('@material-ui/core/Fab'));
 var Grid = _interopDefault(require('@material-ui/core/Grid'));
-var styles$3 = require('@material-ui/core/styles');
 var DeleteIcon = _interopDefault(require('@material-ui/icons/Delete'));
 var Button = _interopDefault(require('@material-ui/core/Button'));
 var Dialog = _interopDefault(require('@material-ui/core/Dialog'));
@@ -225,7 +224,7 @@ process.env.NODE_ENV !== "production" ? PreviewList.propTypes = {
   showFileNames: PropTypes.bool,
   useChipsForPreview: PropTypes.bool
 } : void 0;
-var PreviewList$1 = styles$3.withStyles(styles, {
+var PreviewList$1 = styles$2.withStyles(styles, {
   name: 'MuiDropzonePreviewList'
 })(PreviewList);
 
