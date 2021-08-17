@@ -280,8 +280,8 @@ var styles$1 = function styles(_ref) {
 };
 
 var defaultSnackbarAnchorOrigin = {
-  horizontal: 'left',
-  vertical: 'bottom'
+  horizontal: 'right',
+  vertical: 'top'
 };
 
 var defaultGetPreviewIcon = function defaultGetPreviewIcon(fileObject, classes) {

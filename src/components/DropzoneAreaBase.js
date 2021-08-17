@@ -61,8 +61,8 @@ const styles = ({palette, shape, spacing}) => ({
 });
 
 const defaultSnackbarAnchorOrigin = {
-    horizontal: 'left',
-    vertical: 'bottom',
+    horizontal: 'right',
+    vertical: 'top',
 };
 
 const defaultGetPreviewIcon = (fileObject, classes) => {
