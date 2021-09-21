@@ -191,7 +191,7 @@ This changelog refers to `master` branch (currently `v3.x`), for `v2.x`-specific
 
 #### :bug: Bugfixes
 
-* Move `@material-ui/icons` to `peerDependencies` (PR [#104](https://github.com/Yuvaleros/material-ui-dropzone/pull/104) by **@panz3r**, reported as [#95](https://github.com/Yuvaleros/material-ui-dropzone/issues/95) by **@char0n**)
+* Move `@mui/icons-material` to `peerDependencies` (PR [#104](https://github.com/Yuvaleros/material-ui-dropzone/pull/104) by **@panz3r**, reported as [#95](https://github.com/Yuvaleros/material-ui-dropzone/issues/95) by **@char0n**)
 
 <br />
 

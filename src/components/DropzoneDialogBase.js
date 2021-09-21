@@ -1,8 +1,8 @@
-import Button from '@material-ui/core/Button';
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogTitle from '@material-ui/core/DialogTitle';
+import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogTitle from '@mui/material/DialogTitle';
 import PropTypes from 'prop-types';
 import * as React from 'react';
 
@@ -46,7 +46,9 @@ function splitDropzoneDialogProps(allProps) {
  */
 class DropzoneDialogBase extends React.PureComponent {
     render() {
-        const [dropzoneDialogProps, dropzoneAreaProps] = splitDropzoneDialogProps(this.props);
+        const [dropzoneDialogProps, dropzoneAreaProps] = splitDropzoneDialogProps(
+            this.props
+        );
         const {
             cancelButtonText,
             dialogProps,
@@ -73,24 +75,15 @@ class DropzoneDialogBase extends React.PureComponent {
                 <DialogTitle>{dialogTitle}</DialogTitle>
 
                 <DialogContent>
-                    <DropzoneAreaBase
-                        {...dropzoneAreaProps}
-                    />
+                    <DropzoneAreaBase {...dropzoneAreaProps} />
                 </DialogContent>
 
                 <DialogActions>
-                    <Button
-                        color="primary"
-                        onClick={onClose}
-                    >
+                    <Button color="primary" onClick={onClose}>
                         {cancelButtonText}
                     </Button>
 
-                    <Button
-                        color="primary"
-                        disabled={submitDisabled}
-                        onClick={onSave}
-                    >
+                    <Button color="primary" disabled={submitDisabled} onClick={onSave}>
                         {submitButtonText}
                     </Button>
                 </DialogActions>
@@ -117,45 +110,42 @@ DropzoneDialogBase.propTypes = {
     /** Sets whether the dialog is open or closed. */
     open: PropTypes.bool,
     /** The Dialog title. */
-    dialogTitle: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.element,
-    ]),
+    dialogTitle: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
     /**
-     * Props to pass to the Material-UI Dialog components.
-     * @see See [Material-UI Dialog](https://material-ui.com/api/dialog/#props) for available values.
-     */
+   * Props to pass to the Material-UI Dialog components.
+   * @see See [Material-UI Dialog](https://material-ui.com/api/dialog/#props) for available values.
+   */
     dialogProps: PropTypes.object,
     /**
-     * If `true`, the dialog stretches to `maxWidth`.<br/>
-     * Notice that the dialog width grow is limited by the default margin.
-     */
+   * If `true`, the dialog stretches to `maxWidth`.<br/>
+   * Notice that the dialog width grow is limited by the default margin.
+   */
     fullWidth: PropTypes.bool,
     /**
-     * Determine the max-width of the dialog. The dialog width grows with the size of the screen.<br/>
-     * Set to `false` to disable `maxWidth`.
-     */
+   * Determine the max-width of the dialog. The dialog width grows with the size of the screen.<br/>
+   * Set to `false` to disable `maxWidth`.
+   */
     maxWidth: PropTypes.string,
     /** Cancel button text in dialog. */
     cancelButtonText: PropTypes.string,
     /** Submit button text in dialog. */
     submitButtonText: PropTypes.string,
     /**
-     * Fired when the modal is closed.
-     *
-     * @param {SyntheticEvent} event The react `SyntheticEvent`
-     */
+   * Fired when the modal is closed.
+   *
+   * @param {SyntheticEvent} event The react `SyntheticEvent`
+   */
     onClose: PropTypes.func,
     /**
-     * Fired when the user clicks the Submit button.
-     *
-     * @param {SyntheticEvent} event The react `SyntheticEvent`
-     */
+   * Fired when the user clicks the Submit button.
+   *
+   * @param {SyntheticEvent} event The react `SyntheticEvent`
+   */
     onSave: PropTypes.func,
     /**
-     * Shows previews **BELOW** the dropzone.<br/>
-     * **Note:** By default previews show up under in the Dialog and inside in the standalone.
-     */
+   * Shows previews **BELOW** the dropzone.<br/>
+   * **Note:** By default previews show up under in the Dialog and inside in the standalone.
+   */
     showPreviews: PropTypes.bool,
     /** Shows preview **INSIDE** the dropzone area. */
     showPreviewsInDropzone: PropTypes.bool,
