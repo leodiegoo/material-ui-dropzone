@@ -45,9 +45,9 @@
     "react-dropzone": "^11.3.4"
   },
   "peerDependencies": {
-    "@mui/icons-material": "^5.0.0-beta.0",
+    "@mui/icons-material": "^5.0.0",
     "@mui/lab": "^5.0.0-alpha.38",
-    "@mui/styles": "^5.0.0-alpha.36",
+    "@mui/styles": "^5.0.0",
     "prop-types": "^15.7.2",
     "react": ">= 17",
     "react-dom": ">= 17"
